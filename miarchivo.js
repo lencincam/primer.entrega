@@ -1,15 +1,24 @@
-const user=prompt("Ingrese un usuario");
-const pass = prompt("Ingrese una password");  
+function User(nombre, apellido, mail, password)
+{
+    this.nombre=nombre;
+    this.apellido=apellido;
+    this.mail=mail;
+    this.password=password;
+}
 
+const nombre = prompt("Ingrese su nombre")
+const apellido = prompt("Ingrese su apellido")
+const mail = prompt("Ingrese su casilla de correo")
+const password = prompt("Ingrese su contraseña")
 alert("Registracion ok, inicie sesion");
 
 login()
 
-function login(){
-    const usuario = prompt("Ingrese su nombre de usuario");
-    const contraseña = prompt("Ingrese su password");
+function login() {
+    const mail = prompt("Ingrese su casilla de correo");
+    const password = prompt("Ingrese su password");
 
-    const validacion =  usuario === user && contraseña === pass;
+    const validacion =  mail === mail && password === password;
 
     if(validacion == true){
         alert("INICIO EXITOSO")
